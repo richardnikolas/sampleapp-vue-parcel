@@ -9,9 +9,12 @@
     "serve:standalone": "vue-cli-service serve --mode standalone"
   },
   "dependencies": {
+    "@splidejs/vue-splide": "^0.3.5",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "single-spa-vue": "^2.1.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-carousel": "^0.18.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
