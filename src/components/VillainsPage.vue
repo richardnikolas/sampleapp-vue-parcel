@@ -1,10 +1,10 @@
 <template>
   <div class="content">
     <h1>
-        Welcome to the <span>Anti Heroes</span> Page!
+        Welcome to the <span>Villains</span> Page!
     </h1>
-    <carousel class="carousel" :per-page="4" :mouse-drag="true" :spacePaddingMaxOffsetFactor="8">
-    <slide  v-for="villain in this.villains" :key="villain.slug">
+    <carousel class="carousel" :per-page="4" :mouse-drag="true" :spacePaddingMaxOffsetFactor="8" :paginationActiveColor="'#efed14'" >
+    <slide v-for="villain in this.villains" :key="villain.slug">
       <villains-card :url="villain.images.lg" :name="villain.name" :description="getDescription(villain)"/>
     </slide>
   </carousel>
@@ -16,6 +16,7 @@
 import axios from 'axios';
 import VillainsCard from './VillainsCard.vue';
 import { Carousel, Slide } from 'vue-carousel';
+
 export default {
   name: 'VillainsPage',
   components: {
@@ -47,21 +48,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  font-size: 50px;
-  margin: 0 30px;
-  color: #FFFFFF
-}
-span {
-  color: #dedc47
-}
-.content {
-  height: 100%;
-  background-color: #011e2c;
-  padding-top: 20px;
-}
-.carousel{
-  margin-top: 40px;
-  margin-left: 40px;
-}
+  h1 {
+    font-size: 50px;
+    margin: 0 30px;
+    color: #FFFFFF
+  }
+  span {
+    color: #efed14;
+  }
+  .content {
+    height: 100%;
+    background-color: #011e2c;
+    padding-top: 20px;
+  }
+  .carousel {
+    margin-top: 40px;
+    margin-left: 40px;
+  }
 </style>
